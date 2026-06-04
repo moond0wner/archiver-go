@@ -22,9 +22,8 @@
 
 ## Установка
 
-```bash
 git clone https://github.com/moond0wner/archiver-go.git
-cd archiver
+cd archiver-go
 ```
 
 Windows:
