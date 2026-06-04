@@ -1,0 +1,35 @@
+package help
+
+import "fmt"
+
+func Show() {
+	fmt.Println("========================================")
+	fmt.Println("          АРХИВАТОР (RLE)")
+	fmt.Println("========================================")
+	fmt.Println("Назначение:")
+	fmt.Println("  - Сжатие любых файлов (текст, BMP)")
+	fmt.Println("  - Распаковка обратно без потерь")
+	fmt.Println()
+	fmt.Println("Формат архива:")
+	fmt.Println("  - Сигнатура: ARC4 (4 байта)")
+	fmt.Println("  - Исходный размер (8 байт)")
+	fmt.Println("  - Сжатый размер   (8 байт)")
+	fmt.Println("  - Сжатые данные (RLE)")
+	fmt.Println()
+	fmt.Println("Использование:")
+	fmt.Println("  archiver compress <входной_файл> <выходной_архив>")
+	fmt.Println("  archiver decompress <входной_архив> <выходной_файл>")
+	fmt.Println()
+	fmt.Println("Примеры:")
+	fmt.Println("  archiver compress text.txt compressed.arc")
+	fmt.Println("  archiver decompress compressed.arc restored.txt")
+	fmt.Println()
+	fmt.Println("Создание тестовых файлов:")
+	fmt.Println(" archiver gen-txt <имя_файла>")
+	fmt.Println(" archiver gen-bmp <имя_файла>")
+	fmt.Println()
+	fmt.Println("Примеры:")
+	fmt.Println(" archiver gen-txt test")
+	fmt.Println(" archiver gen-bmp test")
+	fmt.Println("========================================")
+}
