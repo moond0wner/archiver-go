@@ -1,8 +1,8 @@
-package help
+package utils
 
 import "fmt"
 
-func Show() {
+func ShowHelp() {
 	fmt.Println("========================================")
 	fmt.Println("          АРХИВАТОР (RLE)")
 	fmt.Println("========================================")

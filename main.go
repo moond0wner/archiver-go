@@ -6,7 +6,6 @@ import (
 
 	"github.com/moond0wner/archiver-go/compress"
 	"github.com/moond0wner/archiver-go/decompress"
-	"github.com/moond0wner/archiver-go/help"
 	"github.com/moond0wner/archiver-go/utils"
 )
 
@@ -59,7 +58,7 @@ func main() {
 		}
 
 	case "help":
-		help.Show()
+		utils.ShowHelp()
 
 	default:
 		fmt.Printf("Неизвестная команда: %s\n", cmd)
