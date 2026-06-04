@@ -2,6 +2,7 @@
 # Archiver
 
 Консольный архиватор с использованием RLE (Run‑Length Encoding) на Go.
+Работает как скрипт, можно запускать через `go run` или как собранный исполняемый файл.
 
 ## Возможности
 - Сжатие файлов (.bmp, .pcx, .tga, .ico, .cur, .txt (с повторами), .log, .csv (с повторами), .raw, .pbm, .pgm, .ppm)
@@ -24,34 +25,45 @@
 ```bash
 git clone https://github.com/moond0wner/archiver-go.git
 cd archiver
+```
+
+Windows:
+```bash
 go build -o archiver.exe
+```
+
+Linux:
+```bash
+go build -o archiver
 ```
 
 ## Использование
 
+### Через собранный бинарник (после `go build`)
 ```bash
 # Справка
-archiver.exe help
+archiver help
 
 # Создать тестовые файлы
-archiver.exe gen-txt test         # создаст test.txt
-archiver.exe gen-bmp test         # создаст test.bmp
+archiver gen-txt test         # создаст test.txt
+archiver gen-bmp test         # создаст test.bmp
 
 # Сжатие
-archiver.exe compress input.txt output.arc
-archiver.exe compress image.bmp output.arc
+archiver compress input.txt output.arc
+archiver compress image.bmp output.arc
 
 # Распаковка
-archiver.exe decompress output.arc restored.txt
-archiver.exe decompress output.arc restored.bmp
+archiver decompress output.arc restored.txt
+archiver decompress output.arc restored.bmp
 ```
 
-## Пример
+## Через go run (без сборки)
 
 ```bash
-archiver.exe gen-txt sample
-archiver.exe compress sample.txt sample.arc
-archiver.exe decompress sample.arc restored.txt
+go run main.go help
+go run main.go gen-txt test
+go run main.go compress input.txt output.arc
+go run main.go decompress output.arc restored.txt
 ```
 
 ## Структура проекта
